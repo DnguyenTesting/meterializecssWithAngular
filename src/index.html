@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Meterialize</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+<body class=" white-text grey darken-3">
+  <app-root></app-root>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>  
+
+  <script>
+    $(document).ready(()=>{
+      $('.carousel').carousel();
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+      $('.slider').slider({
+        indicators:false,
+        height:500
+      });
+      $('.modal').modal();
+      $(".button-collapse-left").sideNav({
+        menuWidth: 300, // Default is 300
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true, // Choose whether you can drag to open on touch screens,
+        onOpen: function(el) { 
+          $('.test').css({left:'300px'});
+          console.log('openedLeft');
+        },
+        onClose: function(el) { }
+      });
+      $(".button-collapse-right").sideNav({
+        menuWidth: 300, // Default is 300
+        edge: 'right', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true, // Choose whether you can drag to open on touch screens,
+        onOpen: function(el) {  },
+        onClose: function(el) {  }
+      });
+
+      $('ul.tabs').tabs();
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.col{
+    background-color: #FF6347;
+    padding: 20px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.testv{
+    height: 200px;
+    background-color: black;
+    text-align: center;
+}
+.info{
+    width: 400px;
+    height: 200px;
+    border-radius: 0;
+}
+.toolbar-action{
+    bottom:100px;
+    right: 23px;
+}
